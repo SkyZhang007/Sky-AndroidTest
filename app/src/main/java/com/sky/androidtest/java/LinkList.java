@@ -42,6 +42,9 @@ public class LinkList {
         }
     }
 
+    /**
+     * @return 获取链表长度
+     */
     public int getLinkListLength(){
         if(head == null){
             return 0;
@@ -115,12 +118,15 @@ public class LinkList {
         return first;
     }
 
+    /**
+     * 判断单链表是否成环
+     * @param head
+     * @return
+     */
     public boolean hasCycle(Node head){
-
         if(head == null){
             return false;
         }
-
         Node first = head;
         Node second = head;
         while (second != null){
@@ -132,8 +138,6 @@ public class LinkList {
         }
         return false;
     }
-
-
 
     // 包含两部分 data（数据），next（下一个结点指针）
     class Node<E>{
